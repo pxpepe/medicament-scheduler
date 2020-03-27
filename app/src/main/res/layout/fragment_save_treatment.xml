@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SaveTreatmentFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lblTreatmentDuration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnAddDosis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00897B"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/lblDosisMedicament"
+            android:layout_width="130sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:gravity="end"
+            android:text="@string/name"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/txtTreatmentName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtTreatmentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/name_single"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblDosisMedicament"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblDosisMedicament"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:id="@+id/lblDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/duration_days"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtDuration"
+            app:layout_constraintEnd_toEndOf="@+id/lblDosisMedicament"
+            app:layout_constraintStart_toStartOf="@+id/lblDosisMedicament" />
+
+        <EditText
+            android:id="@+id/txtDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/duration"
+            android:inputType="numberSigned"
+            app:layout_constraintEnd_toEndOf="@+id/txtTreatmentName"
+            app:layout_constraintStart_toStartOf="@+id/txtTreatmentName"
+            app:layout_constraintTop_toBottomOf="@+id/txtTreatmentName"
+            tools:ignore="Autofill" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

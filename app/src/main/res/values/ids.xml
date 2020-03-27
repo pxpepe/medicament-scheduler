@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ctx_remove_treatment" type="id" />
+    <item name="ctx_update_treatment" type="id" />
+    <item name="ctx_share_treatment" type="id" />
+    <item name="ctx_remove_medicament" type="id" />
+    <item name="ctx_update_medicament" type="id" />
+    <item name="ctx_detail_treatment" type="id" />
+    <item name="ctx_stop_instance" type="id" />
+    <item name="ctx_delete_dosis" type="id" />
+</resources>

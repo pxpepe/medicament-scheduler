@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.StartInstanceFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnSaveInstance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00897B"
+            android:text="@string/start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/lblDosisMedicament"
+            android:layout_width="130sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:gravity="end"
+            android:text="@string/treatment_name_s"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblStartDate"
+            android:layout_width="130sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="end"
+            android:text="@string/start_date_s"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/lblDosisMedicament"
+            app:layout_constraintStart_toStartOf="@+id/lblDosisMedicament"
+            app:layout_constraintTop_toBottomOf="@+id/spnTreatments" />
+
+        <Spinner
+            android:id="@+id/spnTreatments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblDosisMedicament"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblDosisMedicament" />
+
+        <EditText
+            android:id="@+id/txtStartDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="datetime"
+            android:hint="@string/date_format_hint"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblStartDate"
+            app:layout_constraintEnd_toEndOf="@+id/spnTreatments"
+            app:layout_constraintStart_toStartOf="@+id/spnTreatments"
+            tools:ignore="Autofill" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

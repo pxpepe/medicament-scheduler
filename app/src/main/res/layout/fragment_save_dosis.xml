@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SaveDosisFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnSaveDosis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00897B"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/lblDosisMedicament"
+            android:layout_width="130sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:gravity="end"
+            android:text="@string/medicament_n"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spnMedicaments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblDosisMedicament"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblDosisMedicament" />
+
+        <TextView
+            android:id="@+id/lblPeriod_m"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/period_h_c"
+            android:gravity="end"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/lblDosisMedicament"
+            app:layout_constraintStart_toStartOf="@+id/lblDosisMedicament"
+            app:layout_constraintTop_toBottomOf="@+id/spnMedicaments" />
+
+        <EditText
+            android:id="@+id/txtNumPeriod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:text="@string/default_num_period"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblPeriod_m"
+            app:layout_constraintEnd_toEndOf="@+id/spnMedicaments"
+            app:layout_constraintStart_toStartOf="@+id/spnMedicaments"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/lblPillNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pill_number"
+            android:gravity="end"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/lblPeriod_m"
+            app:layout_constraintStart_toStartOf="@+id/lblPeriod_m"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumPeriod" />
+
+        <EditText
+            android:id="@+id/txtNumPills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:text="@string/default_num_pills"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblPillNumber"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumPeriod"
+            app:layout_constraintStart_toStartOf="@+id/txtNumPeriod"
+            tools:ignore="Autofill,LabelFor"/>
+
+        <TextView
+            android:id="@+id/lblDelayNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/delay_number"
+            android:gravity="end"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/lblPillNumber"
+            app:layout_constraintStart_toStartOf="@+id/lblPillNumber"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumPills" />
+
+        <EditText
+            android:id="@+id/txtNumDelay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@string/default_num_delay"
+            android:inputType="numberSigned"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lblDelayNumber"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumPills"
+            app:layout_constraintStart_toStartOf="@+id/txtNumPills"
+            tools:ignore="Autofill,LabelFor"/>
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>
